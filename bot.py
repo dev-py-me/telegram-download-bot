@@ -63,6 +63,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 
 # Keep track of the progress while downloadingasync def video(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 async def video(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    await update.message.reply_text("Downloading!")
     cid = update.message.message_id
     #await update.message.reply_to_message(cid,f"Downloading! {cid}")
     document = update.message.video
