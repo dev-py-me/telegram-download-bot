@@ -41,7 +41,7 @@ def progress(size):
       
 def filemoon(url):
     os.system(f"curl -d 'key=31525r7d0x3h23qpfytj9&url={url}' -H 'Content-Type: application/x-www-form-urlencoded' -X POST https://filemoonapi.com/api/remote/add")
-    fpath = "/content/drive/MyDrive/streamtape_{}.txt".format(date.today())       
+    file = open("/content/drive/MyDrive/streamtape_{}.txt".format(date.today()))      
     #file = open("/content/drive/MyDrive/streamlinks.txt","a+")
     #file = open("/sdcard/tg/streamlinks.txt","a+")
     file.writelines(f"\n{url}")
