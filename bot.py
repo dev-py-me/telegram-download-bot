@@ -3,6 +3,7 @@ import os
 import requests, json
 from shutil import move
 from telegram import Update
+from datetime import date
 from telegram.ext import (Application, CommandHandler, ContextTypes,
                           MessageHandler, filters)
                           
@@ -40,7 +41,8 @@ def progress(size):
       
 def filemoon(url):
     os.system(f"curl -d 'key=31525r7d0x3h23qpfytj9&url={url}' -H 'Content-Type: application/x-www-form-urlencoded' -X POST https://filemoonapi.com/api/remote/add")
-    file = open("/content/drive/MyDrive/streamlinks.txt","a+")
+    fpath = "/content/drive/MyDrive/streamtape_{}.txt".format(date.today())       
+    #file = open("/content/drive/MyDrive/streamlinks.txt","a+")
     #file = open("/sdcard/tg/streamlinks.txt","a+")
     file.writelines(f"\n{url}")
     file.close()
