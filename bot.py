@@ -74,20 +74,20 @@ async def video(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     #path = document.file_path
     #datau = progress(size)
     file = await context.bot.get_file(document)
-    await context.bot.send_message(chat_id = 1808315958,text=f"Downloading {document.file_name}",reply_to_message_id=cid)
+    await context.bot.send_message(chat_id = 6410340734,text=f"Downloading {document.file_name}",reply_to_message_id=cid)
     #await update.message.reply_text(f"File {document.file_name} downloaded.\nNow moving.")
-    await context.bot.send_message(chat_id = 1808315958,text=f"File {document.file_name} downloaded.\nNow moving.",reply_to_message_id=cid)
+    await context.bot.send_message(chat_id = 6410340734,text=f"File {document.file_name} downloaded.\nNow moving.",reply_to_message_id=cid)
     move(file.file_path.lstrip(TOKEN),f"{OUTPUT_DIR}{document.file_name}")
-    await context.bot.send_message(chat_id = 1808315958,text=f"File moved.\nLocation: {OUTPUT_DIR}{document.file_name}",reply_to_message_id=cid)
+    await context.bot.send_message(chat_id = 6410340734,text=f"File moved.\nLocation: {OUTPUT_DIR}{document.file_name}",reply_to_message_id=cid)
     #await update.message.reply_text(f"File moved.\nLocation: {OUTPUT_DIR}{document.file_name}")
     path = f"{OUTPUT_DIR}{document.file_name}"
     with open(path, "rb") as file:
         files = {'file': file}
         url = ul_video(ul_url,files)
-        await context.bot.send_message(chat_id = 1808315958,text=f"Link : {url}",reply_to_message_id=cid)
+        await context.bot.send_message(chat_id = 6410340734,text=f"Link : {url}",reply_to_message_id=cid)
         #await update.message.reply_text(f"Link : {url}")
         filemoon(url)
-        await context.bot.send_message(chat_id = 1808315958,text=f"File {document.file_name} Uploaded on filemoon",reply_to_message_id=cid)
+        await context.bot.send_message(chat_id = 6410340734,text=f"File {document.file_name} Uploaded on filemoon",reply_to_message_id=cid)
         #await update.message.reply_text(f"File Uploaded on filemoon")
 
 
