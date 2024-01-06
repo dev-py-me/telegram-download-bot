@@ -54,7 +54,7 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-TOKEN = "6799466389:AAFIPhBYJoPEZmha-qKvDKabrH3PD0ZNnpc"
+TOKEN = "2026940313:AAFmHnGm-LeLrOkJxPwxBUDvbMjDB5dKdKg"
 BASE_URL = "http://0.0.0.0:8081/bot"
 OUTPUT_DIR = "/content/mega/"
 #OUTPUT_DIR = "/sdcard/tg/"
