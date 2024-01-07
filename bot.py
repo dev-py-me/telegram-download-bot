@@ -89,7 +89,7 @@ async def video(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         filemoon(url)
         await context.bot.send_message(chat_id = 6410340734,text=f"File {document.file_name} Uploaded on filemoon",reply_to_message_id=cid)
         #await update.message.reply_text(f"File Uploaded on filemoon")
-
+        rm -rf path
 
 async def document(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     await update.message.reply_text("Downloading!")
