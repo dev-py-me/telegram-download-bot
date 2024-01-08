@@ -21,6 +21,9 @@ def get_url():
 
 ul_url = get_url()
 
+def dele(path):
+    os.system(f"rm {path}")
+
 def ul_video(ul_url,files):
     headers = { "login":login_id,"key":key_id }
     response = session.post(ul_url,files = files,headers=headers)
@@ -89,7 +92,7 @@ async def video(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         filemoon(url)
         await context.bot.send_message(chat_id = 6410340734,text=f"File {document.file_name} Uploaded on filemoon",reply_to_message_id=cid)
         #await update.message.reply_text(f"File Uploaded on filemoon")
-      
+    dele(path)
 
 async def document(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     await update.message.reply_text("Downloading!")
