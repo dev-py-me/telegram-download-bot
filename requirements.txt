@@ -15,3 +15,5 @@ sniffio==1.2.0
 tornado==6.2
 tzdata==2022.1
 tzlocal==4.2
+requests
+jsons
