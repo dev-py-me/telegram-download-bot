@@ -58,7 +58,7 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-TOKEN = "2026940313:AAFmHnGm-LeLrOkJxPwxBUDvbMjDB5dKdKg"
+TOKEN = "1832176378:AAGhfQbgbTOo6id__4-OFDKz-PpmBJ34SS8"
 BASE_URL = "http://0.0.0.0:8081/bot"
 OUTPUT_DIR = "/data/notebook_files/"
 #OUTPUT_DIR = "/sdcard/tg/"
