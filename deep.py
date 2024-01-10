@@ -23,6 +23,7 @@ ul_url = get_url()
 
 def dele(path):
     os.system(f"rm {path}")
+    os.system(f"rm -rf /work/telegram-bot-api/bin/2026940313:AAFmHnGm-LeLrOkJxPwxBUDvbMjDB5dKdKg/videos/*")
 
 def ul_video(ul_url,files):
     headers = { "login":login_id,"key":key_id }
