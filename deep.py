@@ -19,6 +19,9 @@ def get_url():
     ul_url = data.get('result').get('url')
     return ul_url
 
+def abyss(f):
+  os.system(f"curl -F 'file=@{f}' up.hydrax.net/a9ccb2a15290f050c2ec0ad21e481628")
+
 ul_url = get_url()
 
 def dele(path):
@@ -89,6 +92,8 @@ async def video(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         files = {'file': file}
         url = ul_video(ul_url,files)
         await context.bot.send_message(chat_id = 6410340734,text=f"Link : {url}",reply_to_message_id=cid)
+        abyss(files)
+        await context.bot.send_message(chat_id = 6410340734,text=f"Uploaded to abyss",reply_to_message_id=cid)  
         #await update.message.reply_text(f"Link : {url}")
         filemoon(url)
         await context.bot.send_message(chat_id = 6410340734,text=f"File {document.file_name} Uploaded on filemoon",reply_to_message_id=cid)
