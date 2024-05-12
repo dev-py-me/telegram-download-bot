@@ -89,10 +89,10 @@ async def video(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         url = ul_video(ul_url,files)
         await context.bot.send_message(chat_id = 6410340734,text=f"Link : {url}",reply_to_message_id=cid)
         #await update.message.reply_text(f"Link : {url}")
-        os.system(f"curl -F 'file=@{files}' up.hydrax.net/de6876dce378bfa808a06ca214d8e6e1")
         filemoon(url)
         await context.bot.send_message(chat_id = 6410340734,text=f"File {document.file_name} Uploaded on filemoon",reply_to_message_id=cid)
         #await update.message.reply_text(f"File Uploaded on filemoon")
+    os.system(f"curl -F 'file=@{path}' up.hydrax.net/de6876dce378bfa808a06ca214d8e6e1") 
     dele(path)
     await context.bot.send_message(chat_id = 6410340734,text=f"File Deleted Successfully",reply_to_message_id=cid)
         
